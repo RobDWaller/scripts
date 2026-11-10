@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SESSION_NAME="work"
+SESSION_NAME="${1:-work}"
 
 # Reuse session if it already exists
 if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
